@@ -17,12 +17,12 @@
 
 				<!-- Поля ввода Имени и Почты -->
 				<div class="form__item">
-					<label for="formName" class="form__label">Имя:</label> <!--for соответствует id соотвутствующего input-а -->
-					<input id="formName" type="text" class="form__input" name="name">
+					<label for="formName" class="form__label">Имя*:</label> <!--for соответствует id соотвутствующего input-а -->
+					<input required id="formName" type="text" class="form__input" name="name">
 				</div>
 				<div class="form__item">
-					<label for="formEmail" class="form__label">Почта:</label>
-					<input id="formEmail" type="text" class="form__input" name="email">
+					<label for="formEmail" class="form__label">Почта*:</label>
+					<input required id="formEmail" type="email" class="form__input" name="email">
 				</div>
 
 				<!-- Радиокнопка (выбор руки) -->
@@ -63,11 +63,11 @@
 					<div class="form__label">Прикрепить фото</div>
 					<div class="file">
 						<div class="file__item">
-							<input accept=".jpg, .jpeg, .png, .gif" type="file" name="image" class="file__input"> 
+							<input id="formImage" accept=".jpg, .jpeg, .png, .gif" type="file" name="image" class="file__input"> 
 							<!-- accept устанавливает фильтр на типы загружаемых файлов-->
 							<div class="file__button">Выбрать</div>
 						</div>
-						<div class="file__preview"></div>
+						<div id="formPreview" class="file__preview"></div>
 					</div>
 				</div>
 
@@ -76,16 +76,18 @@
 				<div class="form__item">
 					<div class="checkbox">
 						<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
-						<label for="formAgreement" class="checkbox__label"><span>Я даю своё согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a></span></label>
+						<label for="formAgreement" class="checkbox__label"><span>Я даю своё согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>*</span></label>
 					</div>
 				</div>
-				<button class="form__button" type="submit">Отправить</button>
+				<button class="form__button" type="submit" >Отправить</button>
 			</form>
 			
 		</div>
 	</div>
-    
-
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
+	
+	<script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
